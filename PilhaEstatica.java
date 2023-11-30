@@ -30,8 +30,8 @@ public class PilhaEstatica implements Pilha {
             throw new IllegalStateException("Pilha vazia!"); //throw/lança exceção se pilha está vazia
         }
         int valor = dados[topo]; //acha o vakir no topo da pilha
-        dados[topo] = 0; //define o valor no topo como 0 (opcional)
-        topo--; //decrementa o topo
+        dados[topo] = 0; //define o valor no topo como 0 (opcional) e não indice
+        topo--; //decrementa o topo e aponta para elemento imediato abaixo da pilha
         return valor; //retorna o valor removido
     }
     //limpa a pilha, deletando todos os elementos
