@@ -4,7 +4,7 @@ public class PilhaEstatica implements Pilha {
     private int topo = -1; // indice q controla o topo da pilha
 
     //construtor
-    private PilhaEstatica(int tamanho) {
+    PilhaEstatica(int tamanho) {
         dados = new int[tamanho]; //inicia o array c/ taqmanho especifico
     }
 
@@ -41,4 +41,8 @@ public class PilhaEstatica implements Pilha {
         }
         topo = -1; //define o topo como -1 pra indicar que pilha está vazia
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 6dee8d1 (teste na pilha)
