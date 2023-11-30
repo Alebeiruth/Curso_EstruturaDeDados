@@ -4,8 +4,8 @@ Pilha > controla o acesso dos dados, de modo que a inserção(adição de elemen
 no topo da pilha, e as remmoções(remove) seja feito de modo inverso. 
 
 PILHA == LIFO = LAST IN, FIRST OUT
-
-*Lembrar da pilha de roupa ou livro
+ 
+*Lembrar da pilha de roupa ou livro 📚📚📚
 
 *Não há possibilidades de adc um elemento em qualquer lugar da pilha (LIFO)
 
