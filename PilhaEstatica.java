@@ -21,8 +21,8 @@ public class PilhaEstatica implements Pilha {
         if (isCheia()) {
             throw new IllegalStateException("Pilha cheia!"); //throw/lança exceção se pilha está cheia
         }
-        topo++; //adc o topo
-        dados[topo] = valor; //armazena valor no topo da pilha
+        topo++; //adc o topo um, uma posição no indice
+        dados[topo] = valor; //armazena valor no topo da pilha no indice/posição do topo
     }
     //remove da pilha
     public int remover() {
