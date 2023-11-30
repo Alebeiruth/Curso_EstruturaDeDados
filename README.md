@@ -6,6 +6,7 @@ no topo da pilha, e as remmoções(remove) seja feito de modo inverso.
 PILHA == LIFO = LAST IN, FIRST OUT
 
 *Lembrar da pilha de roupa ou livro
+
 *Não há possibilidades de adc um elemento em qualquer lugar da pilha (LIFO)
 
 Pilha > possui eeses atributos principais: adcionar, remover e limpar
