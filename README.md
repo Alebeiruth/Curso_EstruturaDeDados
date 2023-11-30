@@ -15,5 +15,9 @@ iteração (consulta elementos como se fossem ser removidos na ordem que foram e
 
 
 Adicionar(push): adc no topo da pilha
+
+
 Remover(pop): remove e retorna ao topo da pilha
+
+
 Limpar(clear): remove todos elementos da pilha, deixando vazia.
