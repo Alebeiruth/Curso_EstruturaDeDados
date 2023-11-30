@@ -1,4 +1,4 @@
-# Curso_EstruturaDeDados
+# Curso_EstruturaDeDados: Pilha
 
 Pilha > controla o acesso dos dados, de modo que a inserção(adição de elementos) sejam obrigatoriamente feitos em SEQUENCIA,
 no topo da pilha, e as remmoções(remove) seja feito de modo inverso. 
