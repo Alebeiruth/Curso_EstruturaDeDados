@@ -26,5 +26,7 @@ Remover(pop): remove e retorna ao topo da pilha
 Limpar(clear): remove todos elementos da pilha, deixando vazia.
 
 OVERFLOW: não há espaço no vetor para armazenamento
+
 UNDERFLOW: não pode remover elementos de uma pilha vazia
+
 OVERHEAD: valor extra, q não representa informação de fato de dentro da estrutura
