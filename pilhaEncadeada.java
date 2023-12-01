@@ -1,47 +1,47 @@
-private static class No<T>{
-    public No anterior;
-    public T dado;
-}
+public class PilhaEncadeada<T> implements Pilha<T> {
 
-public class pilhaEncadeada implements Pilha{
-    private static class No {
-        public No anterior;
+    private static class No<T> {
+        public No<T> anterior;
         public T dado;
+        
+        public No(T dado) {
+            this.dado = dado;
+            this.anterior = null;
+        }
     }
 
-    private No topo = null;
+    private No<T> topo = null;
 
-    public boolean isCheia(){
-        return false;
+    @Override
+    public boolean isCheia() {
+        return false; // Uma pilha encadeada nunca fica cheia
     }
 
-    public boolean isVazia(){
+    @Override
+    public boolean isVazia() {
         return topo == null;
     }
 
-    public void adcionar (T valor){
-        var novo = new No<T>(); // Cria o no
-        new dado = valor; // e associa o dado
-        New anterior = new topo; // associa o anterior ao topo
-        topo = novo;
+    @Override
+    public void adicionar(T valor) {
+        No<T> novo = new No<>(valor); // Cria o nó com o valor especificado
+        novo.anterior = topo; // Associa o anterior ao topo
+        topo = novo; // Atualiza o topo
     }
 
-    public void remove(){
-        is (isVazia()) {
-            throw new IllegalStateException("Fila vazia!");
+    @Override
+    public T remover() {
+        if (isVazia()) {
+            throw new IllegalStateException("Pilha vazia!");
         }
 
-        T dado = base.dado;
-        base = base.proximo;
-        if (base == null) {
-            topo = null;
-        }
+        T dado = topo.dado;
+        topo = topo.anterior;
         return dado;
     }
 
-    public void limpar(){
+    @Override
+    public void limpar() {
         topo = null;
     }
-//TESTAR ANTES DE COMEÇAR FILA
 }
-
