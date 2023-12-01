@@ -1,16 +1,17 @@
 public class PilhaEncadeada<T> implements Pilha<T> {
-
+    //classe interna de um nó em pilha
     private static class No<T> {
-        public No<T> anterior;
-        public T dado;
-        
+        public No<T> anterior; //nó anterior referencia
+        public T dado; //dado armazenado no Nó
+
+        //contrutor do nó
         public No(T dado) {
             this.dado = dado;
-            this.anterior = null;
+            this.anterior = null; //inicializador nó anterior como nulo
         }
     }
 
-    private No<T> topo = null;
+    private No<T> topo = null; //topo da pilha
 
     @Override
     public boolean isCheia() {
@@ -19,7 +20,7 @@ public class PilhaEncadeada<T> implements Pilha<T> {
 
     @Override
     public boolean isVazia() {
-        return topo == null;
+        return topo == null; //verifica se topo é nulo
     }
 
     @Override
@@ -32,16 +33,16 @@ public class PilhaEncadeada<T> implements Pilha<T> {
     @Override
     public T remover() {
         if (isVazia()) {
-            throw new IllegalStateException("Pilha vazia!");
+            throw new IllegalStateException("Pilha vazia!"); // lança a exceção
         }
 
-        T dado = topo.dado;
-        topo = topo.anterior;
-        return dado;
+        T dado = topo.dado; //obtem dado do topo da pilha
+        topo = topo.anterior; //atualiza o topo para o nó anterior
+        return dado; // retorna o dado removido
     }
 
     @Override
     public void limpar() {
-        topo = null;
+        topo = null; //limpa toda pilha e define o topo como nulo
     }
 }
