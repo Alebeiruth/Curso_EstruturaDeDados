@@ -1,17 +1,21 @@
-public class PilhaEncadeada<T> implements Pilha<T> {
+// todo int vai ser substituido por T
+public interface pilhas<T> {
+    void adcionar (T valor);
+    T remover();
+    bollena isCheia();
+    boolean isVazia();
+    void limpar();
+}
+
+
+public class PilhaEncadeada<T> implements pilhas<T> {
     //classe interna de um nó em pilha
     private static class No<T> {
-        public No<T> anterior; //nó anterior referencia
+        public No anterior; //nó anterior referencia
         public T dado; //dado armazenado no Nó
-
-        //contrutor do nó
-        public No(T dado) {
-            this.dado = dado;
-            this.anterior = null; //inicializador nó anterior como nulo
-        }
+        
     }
-
-    private No<T> topo = null; //topo da pilha
+    private No<T> topo = null; //topo da pilha é nulo
 
     @Override
     public boolean isCheia() {
@@ -25,9 +29,10 @@ public class PilhaEncadeada<T> implements Pilha<T> {
 
     @Override
     public void adicionar(T valor) {
-        No<T> novo = new No<>(valor); // Cria o nó com o valor especificado
-        novo.anterior = topo; // Associa o anterior ao topo
-        topo = novo; // Atualiza o topo
+        var novo = new No<T>(); // Cria o nó com o valor especificado e associa o dado
+        novo.dado = valor // novo valor é inserido
+        novo.anterior = topo; // Associa o anterior ao topo passado
+        topo = novo; // Atualiza o topo com o novo nó
     }
 
     @Override
@@ -36,13 +41,13 @@ public class PilhaEncadeada<T> implements Pilha<T> {
             throw new IllegalStateException("Pilha vazia!"); // lança a exceção
         }
 
-        T dado = topo.dado; //obtem dado do topo da pilha
+        var dado = topo.dado; //obtem dado do topo da pilha
         topo = topo.anterior; //atualiza o topo para o nó anterior
         return dado; // retorna o dado removido
     }
 
     @Override
-    public void limpar() {
+    public void limpar() { //garabage colletor desaloca todos os nós da memoria automanticamente
         topo = null; //limpa toda pilha e define o topo como nulo
     }
 }
