@@ -35,4 +35,23 @@ public void adcionar(T valor) {
     dados[topo] = valor;
 }
 
+public T remover(){
+    if (isVazia()) { //vazia? dispara execeção
+        throw new IllegalStateExceptiom("Fila vazia!");
+}
+    T dado = dados[base];
+    if (base == topo) { //ultimo elemento ?
+        limpar();
+    } else {
+        dados[base] = null;
+        base = mover(base);
+    }
+    return dado;
+}
+public void limpar() {
+    base = 0;
+    topo = -1;
+    for(int i = 0; i < dados.length; i++) {
+        dados[i] = null;
+    }
 }
