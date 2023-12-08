@@ -55,7 +55,7 @@ public class ListaEstatica<T> implements Lista<T> {
     if(isCheia()) {
       throw new IllegalStateException("Lista cheia!");
     }
-    Objects.checkIndez(pos, tamanho + 1);
+    Objects.checkIndez(pos, tamanho + 1); //verifica se o indice é VALIDO
 
     //Move os dados para a direita
     for (int i = tamanho - 1; i >= pos; i--) {
